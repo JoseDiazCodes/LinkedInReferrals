@@ -38,9 +38,9 @@ This application serves as a platform for managing LinkedIn connections and refe
    ```
 3. Start the application:
    ```bash
-   npm start
+   node server.js
    ```
-4. Access the application at `http://localhost:<port_number>` (replace `<port_number>` with the port number specified in your application).
+4. Access the application at `http://localhost:8080` with the port number specified in your application.
 
 ## Usage
 
