@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <title>Manage Your LinkedIn Connections</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header text-center">
+        <h1><span class="fa fa-user-secret"></span> Referral Portal</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+          <h3>Your LinkedIn Connections</h3>
+          <p>Click the envelope icon to mark whether you've met someone through a coffee chat. The list will be sorted by people you have not met with first. Additionally, each contact features a comment icon. By clicking on this icon, you can toggle the display of the comment section for that specific contact. Clicking the icon again will hide the comments, allowing you to manage the visibility of the comment sections easily. This makes it convenient to view and add comments for each contact without cluttering the interface.</p>
+          <ul class="contacts">
+            <% for(let i=0; i<contacts.length; i++) {%>
+              <li class="contact <%= contacts[i].favorite ? 'favorite' : '' %>">
+                <span><%= contacts[i].name %></span>
+                <span><%= contacts[i].phone %></span>
+                <span><%= contacts[i].email %></span>
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <span class="fa-solid fa-comment comment-icon" data-contact-id="<%= contacts[i]._id %>"></span>
+                <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+              </li>
+              <!-- Comment section for each contact -->
+              <div id="comment-section-<%= contacts[i]._id %>" class="comment-section" style="display:none;">
+                <ul class="comments">
+                  <% (contacts[i].comments || []).forEach(function(comment) { %>
+                    <li><%= comment %></li>
+                  <% }) %>
+                </ul>
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button class="btn btn-small btn-add-comment" data-contact-id="<%= contacts[i]._id %>">Add</button>
+              </div>
+            <% } %>
+          </ul>
+          <% if (user.local.email) { %>
+            <form action="/contacts" method="POST">
+              <h2>Add A Contact</h2>
+              <input type="text" placeholder="Name" name="name">
+              <input type="text" placeholder="Phone" name="phone">
+              <input type="email" placeholder="Email" name="email">
+              <button type="submit">Add Contact</button>
+          </form>
+          </div>
+        <% } %>
+    </div>
+    <script src="main.js"></script>
+</div>
+</body>
+</html>

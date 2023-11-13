@@ -1,0 +1,188 @@
+body {
+	padding-top: 80px;
+	word-wrap: break-word;
+	background-color: #f4f4f4;
+	font-family: Arial, sans-serif;
+}
+
+p {
+	font-size: 1em; /* Standard font size for good readability */
+	color: #555; /* A soft color that's easy on the eyes */
+	line-height: 1.6; /* Adequate space between lines for readability */
+	margin-bottom: 20px; /* Space below paragraphs for a clean separation */
+	text-align: justify; /* Justified text for a neat and uniform appearance */
+	word-spacing: 0.1em; /* Slightly more space between words for clarity */
+	letter-spacing: 0.02em; /* Small letter spacing to improve legibility */
+}
+
+h2 {
+	font-size: 1.2em;
+	color: #333;
+	margin-bottom: 15px;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.col-sm-6 h3 {
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.col-sm-6 p {
+	font-size: 1em;
+	color: #555;
+	margin-bottom: 20px;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+.page-header h1 {
+	color: #333;
+	margin-bottom: 30px; /* More space above the content */
+}
+
+.contacts {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li.contact {
+	background: #fafafa;
+	padding: 15px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #ddd; /* Subtle border */
+	width: 100%; /* Full width for individual contact items */
+}
+
+li.contact.favorite {
+	background: rgb(250, 250, 210); /* Highlight favorite contacts */
+}
+
+.contact-details {
+	flex-grow: 1; /* Allows contact details to take up available space */
+	margin-right: 15px; /* Adds some space between details and icons */
+}
+
+.contact span {
+	display: block; /* Stack the details */
+	margin-bottom: 5px;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+}
+
+.fa-envelope,
+.fa-trash,
+.fa-edit {
+	color: #333;
+	cursor: pointer;
+	font-size: 1.2em; /* Slightly larger icons */
+	margin-left: 10px;
+}
+
+/* Hover effects for interactive elements */
+.fa-trash:hover {
+	color: #007bff; /* Highlight color on hover */
+}
+.fa-envelope:hover {
+	color: green;
+}
+
+form {
+	background: #f9f9f9;
+	padding: 20px;
+	border-radius: 4px;
+	margin-top: 30px; /* More space above the form */
+}
+
+form input[type="text"],
+form input[type="email"],
+form button {
+	width: 100%;
+	padding: 12px 15px; /* Increased padding for better spacing */
+	margin-bottom: 15px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+form button {
+	background-color: orange;
+	color: white;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+form button:hover {
+	background-color: black;
+}
+
+/* Comments Section Styles with Text Alignment and Full-Width Button */
+.comment-section {
+	background: #f8f8f8;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+	border: 1px solid #e1e1e1;
+	text-align: left; /* Aligns all text to the left */
+}
+
+.comments {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.comments li {
+	background: #fff;
+	padding: 8px 12px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+	font-size: 0.9em;
+	border: 1px solid #e1e1e1;
+	word-break: break-word;
+}
+
+.comment-input {
+	width: 100%;
+	padding: 8px 10px;
+	margin-top: 10px;
+	margin-bottom: 10px; /* Added space between input and button */
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+.btn-add-comment {
+	width: 100%; /* Makes the button take full width */
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btn-add-comment:hover {
+	background-color: #4cae4c;
+}
