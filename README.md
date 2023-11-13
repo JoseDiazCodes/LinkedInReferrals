@@ -6,8 +6,16 @@ This application serves as a platform for managing LinkedIn connections and refe
 
 ## Installation
 
-1. Clone repo
-2. run `npm install`
+1. Clone the repository.
+2. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the application:
+   ```bash
+   node server.js
+   ```
+4. Access the application at `http://localhost:8080` with the port number specified in your application.
 
 ## Usage
 
@@ -28,19 +36,6 @@ This application serves as a platform for managing LinkedIn connections and refe
 - Backend: Node.js, Express
 - Database: MongoDB (assumed from the use of Mongoose)
 - Additional Libraries: Mongoose, Passport.js (for authentication)
-
-## Installation
-
-1. Clone the repository.
-2. Install the required dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the application:
-   ```bash
-   node server.js
-   ```
-4. Access the application at `http://localhost:8080` with the port number specified in your application.
 
 ## Usage
 
