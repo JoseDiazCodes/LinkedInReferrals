@@ -1,3 +1,9 @@
+# LinkedIn Referrals CRUD Application
+
+## Overview
+
+This application serves as a platform for managing LinkedIn connections and referrals. It provides users with the ability to keep track of their LinkedIn contacts, mark favorites, add comments to each contact, and manage these contacts through a user-friendly interface.
+
 ## Installation
 
 1. Clone repo
@@ -7,12 +13,6 @@
 
 1. run `node server.js`
 2. Navigate to `localhost:8080`
-
-# LinkedIn Referrals CRUD Application
-
-## Overview
-
-This application serves as a platform for managing LinkedIn connections and referrals. It provides users with the ability to keep track of their LinkedIn contacts, mark favorites, add comments to each contact, and manage these contacts through a user-friendly interface.
 
 ## Features
 
